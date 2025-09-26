@@ -6,22 +6,22 @@ const Skills = () => {
       <div className="skills-grid">
         <div className="skills-category">
           <h3>Frontend</h3>
-          <p>React, Flutter, HTML, CSS, JavaScript</p>
+          <p>React, Flutter, HTML5, CSS3, Typescript</p>
         </div>
 
         <div className="skills-category">
           <h3>Backend</h3>
-          <p>Node.js, Python (Flask), AWS Lambda</p>
+          <p>Node.js, Python</p>
         </div>
 
         <div className="skills-category">
           <h3>Database</h3>
-          <p>DynamoDB, MySQL, MongoDB</p>
+          <p>DynamoDB, MySQL</p>
         </div>
 
         <div className="skills-category">
           <h3>Tools</h3>
-          <p>Git, Docker, Postman, VS Code</p>
+          <p>Git, VS Code, Figma, Android Studio, AWS, Canva</p>
         </div>
       </div>
     </section>

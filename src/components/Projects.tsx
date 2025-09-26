@@ -1,39 +1,65 @@
-const Projects = () => {
+import React from "react";
+import "../App.css";
+
+import githubIcon from "../icons/github.svg";
+
+interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+  github?: string;
+}
+
+const Projects: React.FC = () => {
+  const projects: Project[] = [
+    {
+      title: "Smart Parking System with ALPR & Mobile App",
+      description:
+        "Developed an IoT-based parking system with Raspberry Pi, ultrasonic sensors, and ALPR for license plate recognition and automated entry. Integrated AWS services and built a Flutter app with Cognito for real-time slot availability, history, and payments.",
+      tech: ["Raspberry Pi", "Python", "OpenCV", "AWS", "Figma", "Flutter", "REST API"],
+      github: ""
+    },
+    {
+      title: "Personal Portfolio Website",
+      description:
+        "Designed and developed a responsive portfolio website using React and TypeScript to showcase my projects, skills, and experience with a clean and modern UI.",
+      tech: ["React", "TypeScript", "HTML", "CSS"],
+      github: "https://github.com/sunlysetiawan/Portfolio-sunly"
+    },
+  ];
+
   return (
     <section id="projects" className="projects">
       <h2>Projects</h2>
       <div className="project-list">
-        <div className="project-card">
-          <h3>Project 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis sem nec tortor.</p>
-          <div className="tech-tags">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
-          </div>
-        </div>
+        {projects.map((project, index) => (
+          <div className="project-card" key={index}>
+            <div className="project-content">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div className="tech-tags">
+                {project.tech.map((techItem, idx) => (
+                  <span key={idx}>{techItem}</span>
+                ))}
+              </div>
+            </div>
 
-        <div className="project-card">
-          <h3>Project 2</h3>
-          <p>Praesent a ultrices felis. Nulla velit ipsum, finibus id iaculis ut, aliquam semper nibh.</p>
-          <div className="tech-tags">
-            <span>Flutter</span>
-            <span>Firebase</span>
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-btn"
+              >
+                View on
+                <img src={githubIcon} alt="GitHub" className="github-icon" />
+              </a>
+            )}
           </div>
-        </div>
-
-        <div className="project-card">
-          <h3>Project 3</h3>
-          <p>Quisque vel porta lacus. Nam quis lobortis ipsum. Vivamus consectetur mi quam.</p>
-          <div className="tech-tags">
-            <span>AWS</span>
-            <span>DynamoDB</span>
-            <span>Lambda</span>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
