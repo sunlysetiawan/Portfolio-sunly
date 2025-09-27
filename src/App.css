@@ -393,6 +393,36 @@ a {
 
 
 
+.certificates {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.certificates h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.certificate-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.certificate-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
 /* Contact Section */
 .contact {
   padding: 60px 20px;  /* kept the newer padding */
