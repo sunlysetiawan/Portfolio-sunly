@@ -8,12 +8,8 @@ const Certificate = () => {
           <p>Amazon Web Services · 2024</p>
         </div>
         <div className="certificate-card">
-          <h3>Flutter Development</h3>
-          <p>Udemy · 2023</p>
-        </div>
-        <div className="certificate-card">
-          <h3>Responsive Web Design</h3>
-          <p>freeCodeCamp · 2022</p>
+          <h3>AWS Cloud Practitioner</h3>
+          <p>Amazon Web Services · 2024</p>
         </div>
       </div>
     </section>
