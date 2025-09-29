@@ -523,6 +523,7 @@ a {
 }
 
 .close-btn {
+  color: red;
   position: absolute;
   top: 8px;
   right: 12px;
@@ -550,9 +551,8 @@ a {
 }
 
 .view-cert:hover {
-  color: #ffffff;
+  color: #8f6aff;
 }
-
 
 
 

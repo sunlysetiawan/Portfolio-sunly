@@ -142,7 +142,7 @@ const Certificate = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="close-btn mb-2 text-gray-600 hover:text-red-600"
+              className="close-btn"
               onClick={() => setOpenCert(null)}
             >
               ✕
