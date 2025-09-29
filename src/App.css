@@ -168,8 +168,6 @@ a {
   margin: 0 auto;
   padding: 6rem 2rem;
   min-height: 100vh;
-
-  /* keep consistent with other sections */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -181,7 +179,7 @@ a {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: #fff; /* same as global headings */
+  color: #fff;
 }
 
 .experience-list {
@@ -200,7 +198,7 @@ a {
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
-  text-align: left; /* inside card should align left */
+  text-align: left;
 }
 
 .experience-item:hover {
@@ -228,7 +226,7 @@ a {
 
 .experience-header h3 {
   margin: 0;
-  font-size: 1.2rem; /* bumped slightly to match other section text */
+  font-size: 1.2rem;
   line-height: 1.2;
   color: #fff;
 }
@@ -418,7 +416,6 @@ a {
 
 
 /* Certificates Section*/
-/* Certificates Section */
 .certificates {
   padding: 6rem 2rem;
   text-align: center;
@@ -431,11 +428,8 @@ a {
 
 .certificate-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem; 
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .certificate-card {
@@ -443,8 +437,10 @@ a {
   border: 1px solid #333;
   border-radius: 10px;
   padding: 1.5rem;
-  text-align: center;
+  text-align: left;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .certificate-card:hover {
@@ -453,10 +449,30 @@ a {
 }
 
 .certificate-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #fff;
+  margin: 0 0 0.5rem 0;
+}
+
+.badge-img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: 0 auto 1rem auto;
+}
+
+.provider {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #444;
+  margin: 0 0 0.1rem 0;
+}
+
+.issued {
+  font-size: 0.85rem;
+  color: #777;
+  margin: 0 0 1rem 0;
 }
 
 .certificate-card p {
@@ -464,27 +480,65 @@ a {
   font-size: 0.95rem;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  padding: 1rem;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.certificate-buttons {
+  margin-top: auto;  /* pushes buttons to bottom */
+  display: flex;
+  gap: 0.5rem;
+}
+
 
 
 
 /* Contact Section */
 .contact {
-  padding: 60px 20px;  /* kept the newer padding */
+  padding: 60px 20px;
   text-align: center;
 }
 
 .contact h2 {
   font-size: 2rem;
-  font-weight: 700;    /* added from first block */
-  margin-bottom: 30px; /* unified */
+  font-weight: 700;
+  margin-bottom: 30px;
   color: #fff;
 }
 
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 25px;           /* unified */
-  max-width: 900px;    /* replaced min-width with max-width */
+  gap: 25px;
+  max-width: 900px;
   margin: 0 auto;
   align-items: start;
 }
@@ -498,9 +552,9 @@ a {
 /* Contact Info */
 .contact-info {
   background: #2a2a2a;
-  border: 1px solid #333;   /* kept border */
+  border: 1px solid #333;
   padding: 25px;
-  border-radius: 12px;      /* newer radius */
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
   text-align: left;
 }

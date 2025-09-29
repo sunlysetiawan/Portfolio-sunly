@@ -25,7 +25,7 @@ const Projects: React.FC = () => {
         "Flutter",
         "REST API",
       ],
-      github: ".",
+      github: "",
     },
     {
       title: "Personal Portfolio Website",
