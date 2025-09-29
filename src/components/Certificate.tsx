@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Eye } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const Certificate = () => {
   const [openCert, setOpenCert] = useState<string | null>(null);
@@ -83,16 +84,18 @@ const Certificate = () => {
             key={index}
             className="certificate-card relative border p-4 rounded-lg shadow"
           >
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                setOpenCert(cert.file);
-              }}
-              title="Preview Certificate"
-            >
-              <Eye className="w-5 h-5" />
-            </a>
+            <div>
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setOpenCert(cert.file);
+                }}
+                title="Preview Certificate"
+              >
+                <Eye className="w-5 h-5" />
+              </a>
+            </div>
 
             {cert.badge && (
               <img
@@ -103,20 +106,27 @@ const Certificate = () => {
             )}
 
             <div className="certificate-info">
-              <h3 className="text-lg font-semibold">{cert.title}</h3>
-              <p className="text-sm text-gray-500">by {cert.provider}</p>
-              <p className="text-sm text-gray-500">Issued: {cert.date}</p>
+              <div className="certificate-title">
+                <h3 className="">{cert.title}</h3>
+              </div>
+
+              <p className="">by {cert.provider}</p>
+              <p className="">Issued: {cert.date}</p>
             </div>
 
-            {cert.link && (
-              <a
-                href={cert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Certificate
-              </a>
-            )}
+            <div className="certificate-buttons mt-2">
+              {cert.link && (
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="view-cert"
+                >
+                  View Certificate
+                  <ExternalLink className="" />
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </div>

@@ -441,6 +441,7 @@ a {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .certificate-card:hover {
@@ -451,15 +452,34 @@ a {
 .certificate-card h3 {
   font-size: 1.2rem;
   font-weight: 700;
+  margin: 10 0 1.5rem 0;
+  min-height: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2rem;
+}
+
+.certificate-title {
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.certificate-title h3 {
+  min-height: 4rem;
+  line-height: 2rem;
   margin: 0 0 0.5rem 0;
 }
 
-.badge-img {
+ .badge-img {
   display: block;
   width: 200px;
   height: 200px;
   object-fit: contain;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 2rem auto;
 }
 
 .provider {
@@ -513,10 +533,26 @@ a {
 }
 
 .certificate-buttons {
-  margin-top: auto;  /* pushes buttons to bottom */
+  margin-top: 1rem;
   display: flex;
   gap: 0.5rem;
 }
+
+.view-cert {
+  color: #4f87ff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.view-cert:hover {
+  color: #ffffff;
+}
+
 
 
 
