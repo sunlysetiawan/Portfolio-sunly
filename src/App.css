@@ -68,14 +68,34 @@ a {
 }
 
 .nav-links a {
+  position: relative;
   font-weight: 500;
-  transition: color 0.2s ease;
   color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 2px;
+  background-color: #3d98de;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #3d98de;
 }
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
 
 
 

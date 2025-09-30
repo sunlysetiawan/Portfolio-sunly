@@ -25,16 +25,8 @@ const Projects: React.FC = () => {
         "Flutter",
         "REST API",
       ],
-      github: "",
+      github: ".",
     },
-    {
-      title: "Personal Portfolio Website",
-      description:
-        "Designed and developed a responsive portfolio website using React and TypeScript to showcase my projects, skills, and experience with a clean and modern UI.",
-      tech: ["React", "TypeScript", "HTML", "CSS"],
-      github: "https://github.com/sunlysetiawan/Portfolio-sunly",
-    },
-    
   ];
 
   return (
