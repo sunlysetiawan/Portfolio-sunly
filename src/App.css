@@ -621,6 +621,15 @@ a {
   text-decoration: underline;
 }
 
+.contact-info p a.email-link {
+  color: #4f87ff;
+  text-decoration: underline;
+}
+
+.contact-info p a.email-link:hover {
+  color: #8f6aff;
+}
+
 .icon {
   width: 20px;
   height: 20px;
@@ -652,7 +661,6 @@ a {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
   text-align: left;
-  
 }
 
 .contact-form h3 {
@@ -663,11 +671,12 @@ a {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ddd;
   font-size: 1rem;
+  margin-top: 6px;
 }
 
 .contact-form textarea {

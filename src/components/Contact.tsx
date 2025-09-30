@@ -1,6 +1,4 @@
 import "../App.css";
-
-import phoneIcon from "../icons/phone.svg";
 import locationIcon from "../icons/location.svg";
 import emailIcon from "../icons/email.svg";
 import githubIcon from "../icons/github.svg";
@@ -11,17 +9,16 @@ const Contact = () => {
     <section id="contact" className="contact">
       <h2>Contact Me</h2>
       <div className="contact-container">
-        {/* Contact Information */}
+        {/* Contact information */}
         <div className="contact-info">
           <h3>Get in Touch</h3>
           <p>
-            <img src={phoneIcon} alt="Phone" className="icon" />
-            +60 12-352 3912
-          </p>
-          <p>
             <img src={emailIcon} alt="Email" className="icon" />
-            sunlysetiawan@gmail.com
+            <a href="mailto:sunlysetiawan@gmail.com" className="email-link">
+              sunlysetiawan@gmail.com
+            </a>
           </p>
+
           <p>
             <img src={locationIcon} alt="Location" className="icon" />
             Riau Island, Indonesia
@@ -44,7 +41,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
+        {/* Contact form */}
         <form className="contact-form">
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" />
