@@ -70,11 +70,11 @@ a {
 .nav-links a {
   font-weight: 500;
   transition: color 0.2s ease;
-  color: #ccc;
+  color: #ffffff;
 }
 
 .nav-links a:hover {
-  color: #fff;
+  color: #3d98de;
 }
 
 
@@ -120,22 +120,25 @@ a {
 }
 
 .btn.primary {
-  background: #4da6ff;
+  border: 1px solid #756e6e;
+  background: black;
   color: #fff;
 }
 
 .btn.primary:hover {
-  background: #1a75ff;
+  border: 1px solid white;
+  background: #333;
   transform: translateY(-2px);
 }
 
 .btn.secondary {
-  border: 1px solid #fff;
+  border: 1px solid #756e6e;
   color: #fff;
-  background: transparent;
+  background: black;
 }
 
 .btn.secondary:hover {
+  border: 1px solid white;
   background: #333;
   transform: translateY(-2px);
 }
@@ -222,6 +225,10 @@ a {
   color: #fff;
   font-family: inherit;
   text-align: left;
+}
+
+.experience-header:focus {
+  outline: none;
 }
 
 .experience-header h3 {
@@ -697,14 +704,15 @@ a {
   width: 100%;
   padding: 12px;
   border: none;
-  background: linear-gradient(90deg, #0077ff, #00bfff);
+  background: rgb(73, 122, 228);
   color: white;
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form button:hover {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  background: rgb(73, 122, 228);
+  transform: translateY(-2px);
 }

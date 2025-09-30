@@ -4,7 +4,7 @@ const Intro = () => {
       <h1>Hi, I'm Sunly Setiawan</h1>
       <h2>Mobile & Web Developer</h2>
       <div className="buttons">
-        <a href="#projects" className="btn">
+        <a href="#projects" className="btn primary">
           View Projects
         </a>
         <a href="" className="btn secondary">
