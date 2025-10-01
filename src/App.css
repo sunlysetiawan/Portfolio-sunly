@@ -681,6 +681,10 @@ a {
   transform: scale(1.2);
 }
 
+.social-links a img[alt="LinkedIn"]:hover {
+  filter: invert(46%) sepia() saturate(3170%) hue-rotate(195deg);
+}
+
 /* Contact Form */
 .contact-form {
   background: #2a2a2a;
@@ -724,8 +728,9 @@ a {
   width: 100%;
   padding: 12px;
   border: none;
-  background: rgb(73, 122, 228);
+  background: black;
   color: white;
+  border: 1px solid grey;
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
