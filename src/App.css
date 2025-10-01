@@ -372,6 +372,12 @@ a {
   border-radius: 20px;
   font-size: 0.85rem;
   color: #eee;
+  user-select: none;
+}
+
+.tech-tags span:hover {
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .github-btn {
@@ -404,7 +410,6 @@ a {
 
 
 /* Skills Section */
-/* Skills Section */
 .skills-section {
   padding: 3rem 1rem;
   text-align: center;
@@ -412,38 +417,42 @@ a {
 
 .skills-title {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 2rem;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-
 .skills-category {
   background: #2a2a2a;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.skills-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
 
 .category-title {
-  font-size: 1.25rem;
-  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  user-select: none;
 }
 
 .icon-grid {
   display: grid;
-  gap: 1.2rem;
+  gap: 1rem;
   justify-items: center;
 }
 
@@ -459,13 +468,18 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.9rem;
-  color: #fff;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  user-select: none;
 }
 
-.icon-box span {
-  margin-top: 0.8rem;
-  margin-bottom: 0.5rem;
+.icon-box svg {
+  width: 50px;
+  height: 50px;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 
