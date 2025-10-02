@@ -48,7 +48,7 @@ a {
 
 /* Navbar */
 .navbar {
-  background: rgba(34, 34, 34, 0.85);
+  background: #1e1e1e;        /* ? transparent */
   backdrop-filter: blur(6px);
   padding: 1rem 2rem;
   position: fixed;
@@ -444,9 +444,8 @@ a {
 
 .category-title {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
   margin-bottom: 1rem;
+  font-weight: 600;
   user-select: none;
 }
 
@@ -468,7 +467,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
   font-size: 0.95rem;
   font-weight: 500;
   color: #ffffff;
@@ -476,9 +474,9 @@ a {
 }
 
 .icon-box svg {
-  width: 50px;
-  height: 50px;
-  margin-top: 1rem;
+  width: 40px;
+  height: 40px;
+  margin-top: 1.2rem;
   margin-bottom: 0.8rem;
 }
 
@@ -750,7 +748,7 @@ a {
   border-radius: 8px;
   border: 1px solid #ddd;
   font-size: 1rem;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .contact-form textarea {
@@ -770,7 +768,6 @@ a {
 .contact-form button {
   width: 100%;
   padding: 12px;
-  border: none;
   background: black;
   color: white;
   border: 1px solid grey;
